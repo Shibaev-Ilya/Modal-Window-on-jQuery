@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./css/normalize.min.css">
+	<link rel="stylesheet" href="./css/style.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+
+<body>
+	<a href="#" class="button">Купить</a>
+	<div id="div1"></div>
+	<div class="modal">
+		<div class="close"></div>
+		<h2>подписка</h2>
+		<div class="steps">
+			<div class="step one active"><a href="#">Шаг 1<br><span>Выберите выпуск</span></a></div>
+			<div class="step two"><a href="#" onclick="step2()">Шаг 2<br><span>Ваши данные</span></a></div>
+			<div class="step three"><a href="#" onclick="step3()">Шаг 3<br><span>Ваш адрес</span></a></div>
+			<div class="step four"><a href="#" onclick="step4()">Шаг 4<br><span>Доставка</span></a></div>
+		</div>
+		<div class="wrapper">
+			<form id="form">
+				<div id="step-1">
+					<select name="seriesp" id="ser">
+						<option value="" disabled selected hidden>Серия</option>
+						<option value="1">1.0</option>
+						<option value="2">2.0</option>
+						<option value="3">3.0</option>
+						<option value="4">4.0</option>
+					</select>
+					<select name="numbersMagazine[]" id="num">
+						<option value="" disabled selected hidden>Номер журнала</option>
+						<option value="num1">Перый журнал</option>
+						<option value="num2">Второй журнал</option>
+						<option value="num3">Третий журнал</option>
+						<option value="num4">Четвертый журнал</option>
+					</select>
+					<select name="sum[]" id="sum">
+						<option value="" disabled selected hidden>Количество выпусков</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+					</select>
+				</div>
+				<div class="step-2 hidden">
+					<input class="field" type="text" placeholder="Имя" name="Name">
+					<input class="field" type="text" placeholder="Телефон" name="tel">
+					<input class="field" type="text" placeholder="Фамилия" name="secondName">
+					<input class="field" type="text" placeholder="e-mail" name="e-mail">
+					<input class="field" type="text" placeholder="Отчество" name="middleName">
+				</div>
+				<div class="step-3 hidden">
+					<input class="field" type="text" placeholder="Индекс" name="zipcode">
+					<input class="field" type="text" placeholder="Область" name="obl">
+					<input class="field" type="text" placeholder="Город" name="city">
+					<input class="field" type="text" placeholder="Улица" name="street">
+				</div>
+				<div class="step-4 hidden">
+						<select name="sum[]" id="su">
+								<option value="" disabled selected hidden>Тип доставки</option>
+								<option value="1">Курьер</option>
+							</select>
+							<select name="sum[]" id="su">
+								<option value="" disabled selected hidden>Способ оплаты</option>
+								<option value="1">Наличные</option>
+								<option value="1">Карта</option>
+							</select>
+				</div>
+			</form>
+		</div>
+
+		<div class="buttonBottom">
+			<div class="back">Назад</div>
+			<div class="forward">Вперед</div>
+			<button type="submit" class="subsc hidden" form="form"><span>Подписаться</span></button>
+		</div>
+	</div>
+	<script src="./js/jquery-3.4.1.js"></script>
+	<script src="./js/script.min.js"></script>
+</body>
+
+</html>
